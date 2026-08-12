@@ -6,7 +6,7 @@
 
 std::set<int> ids;
 
-void MembershipCount(int id)
+void MembershipCount(const std::set<int>& ids,int id)
 {
 
     if (ids.count(id))
@@ -31,7 +31,7 @@ int main(){
 
     std::cout << "Count: " << ids.size() << " \n";
 
-    MembershipCount(42);
-    MembershipCount(99);
+    MembershipCount(ids, 42);
+    MembershipCount(ids, 99);
 
 }
